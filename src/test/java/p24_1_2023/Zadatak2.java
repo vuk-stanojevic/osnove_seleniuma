@@ -23,6 +23,7 @@ public class Zadatak2 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/login");
+
 //        WebElement usernameInput = driver.findElement(By.xpath("//input[@id='userName']"));
         WebElement usernameInput = driver.findElement(By.id("userName"));
         usernameInput.sendKeys("itbootcamp");

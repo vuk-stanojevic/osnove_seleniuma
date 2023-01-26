@@ -23,13 +23,7 @@ public class Zadatak1 {
 //Cekanje od 5s
 //Zatvorite pretrazivac
 
-
-//iako su xpath-ovi i name dobri, izbacuje gresku kao da ne moze da ih nadje
-//na sajtu stoji da mora da se enable-uje javascript da bi ovo radilo, a trenutno nemam vremena da pogledam
-//        sta je sve potrebno i kako da se namesti da bi se to uradilo kroz driver, pa da bi onda sve moglo da radi
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-//        ChromeOptions opts = new ChromeOptions();
-//        opts.addArguments("--enable-javascript");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

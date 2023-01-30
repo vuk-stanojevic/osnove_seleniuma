@@ -21,6 +21,9 @@ public class Zadatak4 {
         driver.manage().window().maximize();
         driver.get("https://geodata.solutions/");
 
+
+//      juce mi je radilo sve lepo, danas kad sam hteo da pustim program da proverim,
+//      ne ucitava mi stranicu kroz driver i izbacuje Error 1015 You are being rate limited
         Select select = new Select(driver.findElement(By.name("country")));
         select.selectByValue("Serbia");
         Thread.sleep(1000);
@@ -31,6 +34,5 @@ public class Zadatak4 {
         select.selectByValue("Nis");
         Thread.sleep(5000);
         driver.quit();
-
     }
 }

@@ -4,7 +4,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,43 +48,19 @@ public class Zadatak1 {
                 System.out.println("Dodat je nov to do");
             }
         }
+//      https://www.scientecheasy.com/2020/01/move-element-in-selenium.html/
+//      https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element
+        Actions actions = new Actions(driver);
+        List<WebElement> todosAll = driver.findElements(By.className("toggle"));
+        for (int i = 0; i < todosAll.size(); i++) {
+            actions.moveToElement(todosAll.get(i)).perform();
+            driver.findElement(By.className("destroy")).click();
+        }
 
-
-
-//        https://www.scientecheasy.com/2020/01/move-element-in-selenium.html/
-//        Actions actions = new Actions(driver);
-//        List<WebElement> todosTotal = driver.findElements(By.xpath("//ul[@class='todo-list']/li"));
-//        for (int i = 0; i < todosTotal.size(); i++) {
-//            actions.moveToElement(todosTotal.get(i));
-//            driver.findElement(By.className("destroy")).click();
-//            if(todosTotal.size()==0){
-//                System.out.println("Broj to do-a je 0");
-//            }
-//        }
-
-////        https://www.selenium.dev/documentation/webdriver/actions_api/mouse/#move-to-element
-//        List<WebElement> todosTotal = driver.findElements(By.xpath("//ul[@class='todo-list']/li"));
-//        for (int i = 0; i < todosTotal.size(); i++) {
-//            WebElement hoverable = driver.findElement(By.xpath("//li[last()]//button[contains(@class, 'destroy')]"));
-//            new Actions(driver).moveToElement(hoverable).perform();
-//            driver.findElement(By.className("destroy")).click();
-//            if(todosTotal.size()==0){
-//                System.out.println("Broj to do-a je 0");
-//            }
-//        }
-
-////        https://sqa.stackexchange.com/questions/25693/how-to-locate-an-element-which-is-visible-only-by-mouse-hover-in-selenium-webdri
-//        JavascriptExecutor js = (JavascriptExecutor)driver;
-//        for (int i = 1; i < 8; i++) {
-//            WebElement element = driver.findElement(By.xpath("//ul[@class='todo-list']/li[" + i + "]"));
-//            js.executeScript("arguments[0].click();", element);
-//        }
-
-
-//        todosTotal = driver.findElements(By.xpath("//ul[@class='todo-list']/li"));
-//        if(todosTotal.size()==0){
-//
-//        }
+        List<WebElement> todosNone = driver.findElements(By.xpath("//ul[@class='todo-list']/li"));
+        if(todosNone.size()==0){
+            System.out.println("Broj to do-ova na stranici je 0");
+        }
 
         Thread.sleep(5000);
         driver.quit();

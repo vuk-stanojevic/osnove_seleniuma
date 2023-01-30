@@ -23,30 +23,15 @@ public class Zadatak3 {
         driver.get("https://s.bootsnipp.com/iframe/Dq2X");
 
         List<WebElement> alert = driver.findElements(By.className("alert"));
+        List<WebElement> alertObrisan;
         for (int i = 0; i < alert.size(); i++) {
             alert.get(i).findElement(By.className("close")).click();
             Thread.sleep(1000);
+            alertObrisan = driver.findElements(By.className("alert"));
+            if(alertObrisan.size()==alert.size()-i-1){
+                System.out.println("Element je obrisan");
+            }
         }
-
-//        List<WebElement> alerts = driver.findElements(By.className("alert"));
-//        List<WebElement> buttons = driver.findElements(By.className("close"));
-//        for (int i = 0; i < buttons.size(); i++) {
-//            buttons.get(i).click();
-//            Thread.sleep(1000);
-//            alerts.remove(i);
-//            if(!alerts.get(i).isDisplayed()){
-//                System.out.println("Element je obrisan");
-//            }
-//        }
-
-//        List<WebElement> alert = driver.findElements(By.className("close"));
-//        for (int i = 0; i < alert.size(); i++) {
-//            alert.get(alert.size()-1).findElement(By.className("close")).click();
-//            Thread.sleep(1000);
-//        }
-
-
-
         Thread.sleep(5000);
         driver.quit();
 

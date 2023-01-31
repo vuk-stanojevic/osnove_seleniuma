@@ -32,9 +32,9 @@ public class Zadatak5 {
         for (int i = 0; i < navigation.size(); i++) {
             String u = navigation.get(i).getAttribute("href");
             if(getHTTPResponseStatusCode(u)>=200 && getHTTPResponseStatusCode(u)<400){
-                System.out.println("jeste");
+                System.out.println("Status *" + navigation.get(i).getText() + "* linka je: dobar - veci ili jednako 200 i manji od 400");
             } else {
-                System.out.println("nije");
+                System.out.println("Status *" + navigation.get(i).getText() + "* linka je: los - nije veci ili jednako 200 i manji od 400");
             }
         }
         Thread.sleep(5000);

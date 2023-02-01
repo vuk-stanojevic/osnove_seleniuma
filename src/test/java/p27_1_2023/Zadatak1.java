@@ -18,7 +18,7 @@ public class Zadatak1 {
         driver.findElement(By.id("showLargeModal")).click();
 
         Helper helper = new Helper();
-        if(helper.elementExists(driver, By.id("example-modal-sizes-title-lg"))){
+        if(helper.elementExist(driver, By.id("example-modal-sizes-title-lg"))){
             System.out.println("Element postoji");
         } else {
             System.out.println("Element ne postoji");

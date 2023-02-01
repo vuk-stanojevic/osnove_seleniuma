@@ -29,7 +29,7 @@ public class Zadatak1 {
         for (int i = 0; i < buttons.size(); i++) {
             buttons.get(i).click();
             Thread.sleep(1000);
-            new Helper().elementExists(driver, By.xpath("//div[contains(@id, 'basic')]"));
+            new Helper().elementExist(driver, By.xpath("//div[contains(@id, 'basic')]"));
             Thread.sleep(1000);
         }
         Thread.sleep(5000);

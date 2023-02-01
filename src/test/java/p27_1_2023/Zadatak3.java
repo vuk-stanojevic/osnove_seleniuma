@@ -25,7 +25,7 @@ public class Zadatak3 {
         type.click();
         type.findElements(By.className("SelectMenu-item")).get(1).click();
         Helper helper = new Helper();
-        if (helper.elementExists(driver, By.className("issues-reset-query"))){
+        if (helper.elementExist(driver, By.className("issues-reset-query"))){
             System.out.println("Element postoji");
         } else {
             System.out.println("Element ne postoji");

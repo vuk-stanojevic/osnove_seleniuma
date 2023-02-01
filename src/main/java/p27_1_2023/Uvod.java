@@ -55,7 +55,7 @@ public class Uvod {
 //        }
 
         Helper helper2 = new Helper();
-        if(helper2.elementExistsByList(driver, By.id("id-0"))){
+        if(helper2.elementExistByList(driver, By.id("id-0"))){
             System.out.println("Postoji");
         } else{
             System.out.println("Ne postoji");

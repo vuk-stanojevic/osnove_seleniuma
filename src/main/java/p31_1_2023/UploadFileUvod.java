@@ -14,8 +14,7 @@ public class UploadFileUvod {
 
 //        String uploadImgPath = new File("test_data/lion.jpg").getAbsolutePath();
 
-        System.setProperty("webdriver.chrome.driver",
-                "drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

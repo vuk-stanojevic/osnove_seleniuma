@@ -45,7 +45,7 @@ public class KatalonLoginTests {
 //Za sve validacije ispisati odgovarajuce poruke u slucaju greske
 //Verifikovati da smo idalje na login stranici posle greske, tako sto proveravamo da se url-u javlja /my-account
 
-    public WebDriver driver;
+    private WebDriver driver;
 
     @BeforeClass
     public void beforeClass(){

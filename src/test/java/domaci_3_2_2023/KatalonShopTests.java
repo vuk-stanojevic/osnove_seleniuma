@@ -1,4 +1,4 @@
-package p3_2_2023;
+package domaci_3_2_2023;
 
 import com.sun.org.glassfish.gmbal.Description;
 import org.openqa.selenium.By;
